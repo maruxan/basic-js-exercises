@@ -15,7 +15,7 @@ const {
   deleteDuplicates,
   totalOdds,
   kebabCaseArray,
-} = require('./exercises/02/02');
+} = require('./exercises/02/index');
 
 test('Upper the first letter', () => {
   expect(capitalizeFirst('str')).toBe('Str');
