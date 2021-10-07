@@ -6,8 +6,7 @@ const {
   capitalizeMiddleIfOdd,
   findBaz,
   emptyArr,
-  array,
-} = require('./01');
+} = require('./exercises/01/index');
 const {
   deleteVowels,
   vowelsTo1,
@@ -16,7 +15,7 @@ const {
   deleteDuplicates,
   totalOdds,
   kebabCaseArray,
-} = require('./02');
+} = require('./exercises/02/02');
 
 test('Upper the first letter', () => {
   expect(capitalizeFirst('str')).toBe('Str');
@@ -31,11 +30,11 @@ test('Upper the middle letter', () => {
 });
 
 test('Find the element baz', () => {
-  expect(findBaz(array)).toBe('baz');
+  expect(findBaz(['foo', 'bar', 'baz', 'qux', 'origin'])).toBe('baz');
 });
 
 test('Empty array', () => {
-  expect(emptyArr(array)).toHaveLength(0);
+  expect(emptyArr(['foo', 'bar', 'baz', 'qux', 'origin'])).toHaveLength(0);
 });
 
 test('Delete the vowels', () => {
