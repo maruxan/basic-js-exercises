@@ -16,6 +16,13 @@ const {
   totalOdds,
   kebabCaseArray,
 } = require('./exercises/02/index');
+const {
+  pares,
+  impares,
+  logParesImpares,
+  find,
+  count,
+} = require('./exercises/03/recursividad');
 
 describe('First Exercises', () => {
   /** 01 **/
@@ -90,5 +97,35 @@ describe('Second Exercises', () => {
       '-',
       'javascript',
     ]);
+  });
+});
+
+describe('Recursion Exercises', () => {
+  /** 01 **/
+  test('Count even numbers', () => {
+    expect(pares([4, 5, 1, 3, 6, 7, 9, 0, 3])).toBe(3);
+  });
+
+  test('Count odd numbers', () => {
+    expect(impares([4, 5, 1, 3, 6, 7, 9, 0, 3])).toBe(6);
+  });
+
+  test('Count even and odd numbers', () => {
+    expect(logParesImpares([4, 5, 1, 3, 6, 7, 9, 0, 3])).toBe(
+      'Pares: 3 - Impares: 6'
+    );
+  });
+
+  /** 02 **/
+  test('Find number', () => {
+    expect(find([4, 5, 1, 3, 6, 7, 9, 0, 3], 3)).toBe(3);
+    expect(find([4, 5, 1, 3, 6, 7, 9, 0, 3], 8)).toBe(null);
+  });
+
+  /** 03 **/
+  test('Count instances of number', () => {
+    expect(count([4, 5, 1, 3, 6, 7, 9, 0, 3], 3)).toBe(2);
+    expect(count([4, 5, 1, 3, 6, 7, 9, 0, 3], 6)).toBe(1);
+    expect(count([4, 5, 1, 3, 6, 7, 9, 0, 3], 8)).toBe(0);
   });
 });

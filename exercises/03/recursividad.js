@@ -19,18 +19,22 @@ const impares = (arr) => {
 
 // console.log(impares(lista));
 
-// Alternativa para contar ambos con contadores externos
-let par = 0;
-let impar = 0;
-const countParesImpares = (arr) => {
-  if (arr.length === 0) return;
-  arr[0] % 2 === 0 ? par++ : impar++;
-  return countParesImpares(arr.slice(1));
+/* Alternativa para contar ambos con contadores externos */
+const logParesImpares = (arr) => {
+  let cantPares = 0;
+  let cantImpares = 0;
+
+  const countParesImpares = (arr) => {
+    if (arr.length === 0) return;
+    arr[0] % 2 === 0 ? cantPares++ : cantImpares++;
+    return countParesImpares(arr.slice(1));
+  };
+
+  countParesImpares(arr);
+  return `Pares: ${cantPares} - Impares: ${cantImpares}`;
 };
 
-// countParesImpares(lista);
-// console.log('Pares: ', par);
-// console.log('Impares: ', impar);
+// console.log(logParesImpares(lista));
 
 /**
  * Buscar si existe un numero n en el array
@@ -53,3 +57,11 @@ const count = (arr, el) => {
 };
 
 // console.log(count(lista, 3));
+
+module.exports = {
+  impares,
+  pares,
+  logParesImpares,
+  find,
+  count,
+};
