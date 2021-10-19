@@ -5,6 +5,4 @@ const printUntilTen = (start) => {
   return list.join(' ');
 };
 
-// console.log(printUntilTen(1));
-
 module.exports = printUntilTen;

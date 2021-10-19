@@ -14,7 +14,7 @@ const pipe =
 
 /**
  * Converts a strign to array, executes the passed function, then converts back to string
- * @param {*} string
+ * @param {string} string
  * @param  {...any} fns
  * @returns processed string
  */

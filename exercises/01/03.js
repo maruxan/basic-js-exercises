@@ -13,6 +13,4 @@ const capitalizeMiddleIfOdd = (string) =>
     ? executeArrayFnOnString(string, middleToUpper)
     : string;
 
-// console.log(capitalizeMiddleIfOdd(cadena));
-
 module.exports = capitalizeMiddleIfOdd;

@@ -8,6 +8,4 @@ const lastToUpper = (array) =>
 
 const capitalizeLast = (string) => executeArrayFnOnString(string, lastToUpper);
 
-// console.log(capitalizeLast(cadena));
-
 module.exports = capitalizeLast;

@@ -9,6 +9,4 @@ const firstToUpper = (array) =>
 const capitalizeFirst = (string) =>
   executeArrayFnOnString(string, firstToUpper);
 
-// console.log(capitalizeFirst(cadena));
-
 module.exports = capitalizeFirst;
