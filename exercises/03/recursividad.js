@@ -1,5 +1,3 @@
-const lista = [4, 5, 1, 3, 6, 7, 9, 0, 3];
-
 /**
  * Total de numeros pares e impares
  */
